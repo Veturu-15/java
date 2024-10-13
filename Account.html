@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Account</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow-y: auto;
+            background-image: url("https://images.pexels.com/photos/2680270/pexels-photo-2680270.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .button-container {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            gap: 10px; 
+        }
+        .btn {
+            padding: 10px 20px;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: darkblue;
+        }
+        .main {
+            width: 50%;
+            max-width: 600px;
+            border: 2px solid blue;
+            text-align: center;
+            background-color: aliceblue;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 80px;
+        }
+        h1, h2 {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <a href="transaction.html"><button class="btn">Home</button></a>
+        <button class="btn" onclick="sub()">Debit</button>
+        <button class="btn" onclick="mul()">Credit</button>
+    </div>
+    <div class="main">
+        <h1>User Details</h1>
+        <h2>Account Holder: Ramesh</h2>
+        <h2>Account Number: 1234567890</h2>
+        <h2 id="accountBalance">Account Balance: ₹60,000</h2> 
+        <h2>Branch Name: Kotak - Seethammadhara</h2>
+        <h2>IFSC Code: KKBK0003309</h2>
+    </div>
+    <script>
+        
+        const ACCOUNT_BALANCE_KEY = 'accountBalance';
+        function updateAccountBalance() {
+            const balanceElement = document.getElementById('accountBalance');
+            const balance = localStorage.getItem(ACCOUNT_BALANCE_KEY);
+            balanceElement.textContent = `Account Balance: ₹${balance}`;
+        }
+        updateAccountBalance();
+
+        function sub() {
+            let pin = +prompt("Enter the 4 digit pin code");
+            if (pin === 5678) {
+                location.href = "Debit.html";
+            } else {
+                alert("Invalid Pin Code");
+            }
+        }
+        function mul() {
+            let pin = +prompt("Enter the 4 digit pin code");
+            if (pin === 9912) {
+                location.href = "Credit.html";
+            } else {
+                alert("Invalid Pin Code");
+            }
+        }
+    </script>
+</body>
+</html>

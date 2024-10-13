@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <title>Transaction</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        body{
+            background-image: url("https://static.vecteezy.com/system/resources/previews/012/617/311/original/3d-pay-money-with-mobile-phone-banking-online-payments-concept-bill-on-smartphone-transaction-with-credit-card-mobile-with-financial-paper-on-background-3d-bill-payment-icon-illustration-vector.jpg");
+            overflow-x: hidden;
+            overflow: hidden;
+        }
+        .main1{
+            margin: 200px  100px auto; 
+            text-align: center;  
+            justify-content: space-around;
+        }
+        .col-12 {
+            border: 2px solid black;
+            background-color: blueviolet;
+            color: white;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .col-12:hover {
+            background-color: black;
+            transform: scale(1.05);
+        }
+
+        
+        
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="main">
+        <center>
+            <br>
+            <br>
+        <h1 style="color: red;">Kotak Mahindra Bank</h1>
+    </center>
+    </div>
+    <div class="main1">
+    <div class="row g-5">
+        <div class="col-12 col-lg-3 p-5 mx-3">
+            <h2>
+                Account Details
+            </h2>
+            <br>
+      <a href="Account.html" target="_blank"> <button class="btn btn-primary" onclick="add()">click</button> </a>
+        </div>
+        <div class="col-12 col-lg-3 p-5 mx-3">
+            <h2>
+                Debit Amount
+            </h2>
+            <br>
+           <a href="Debit.html" target="_blank"> <button class="btn btn-primary" onclick="sub()">click</button></a>
+        </div>
+        <div class="col-12 col-lg-3 p-5 mx-3">
+            <h2>
+                Credit  Amount
+            </h2>
+            <br>
+             <a href="credit.html" target="_blank"><button class="btn btn-primary" onclick="mul()">click</button></a>
+        </div>
+     </div>
+    </div>
+</div>
+<script>
+    function add(){
+       let pin=+prompt("Enter the  4 digit pin code");
+       if(pin==1234){
+        window.open("Account.html", "_blank");
+       }
+       else{
+        alert("Invaild pin code")
+       }
+    }
+    function sub(){
+        let pin=+prompt("Enter the 4 digit  pin code");
+        if(pin==5678){
+            window.open("Debit.html", "_blank");
+        }
+        else{
+            alert("Invaild Pin Code")
+        }
+    }
+    function mul(){
+        let pin=+prompt("Enter the 4 digit  pin code");
+        if(pin==9912){
+            window.open("credit.html", "_blank");
+        }
+        else{
+            alert("Invaild Pin Code")
+        }
+    }
+</script>
+</body>
+</html>

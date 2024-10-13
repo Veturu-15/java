@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Calculator</title>
+    <style>
+        h1 {
+            text-align: center;
+            padding: 23px;
+            color: rgb(173, 36, 36); 
+        }
+        #clear {
+            width: 150px; 
+            height: 40px; 
+            border: 3px solid black; 
+            border-radius: 10px;
+            padding: 10px;
+            background-color: #000000; 
+            color: white; 
+            font-size: 15px;
+            margin-top: 10px;
+            transition: 0.3s ease; 
+        }
+
+        #clear:hover {
+            background-color: darkred;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); 
+            transform: scale(1.05);
+        }
+
+        .formstyle {
+            width: 300px;
+            height: 530px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        input {
+            width: 60px; 
+            height: 60px; 
+            background-color: orange; 
+            color: white;
+            border: 3px solid black; 
+            border-radius: 50%; 
+            padding: 10px;
+            margin: 5px;
+            font-size: 15px;
+            transition: 0.3s ease; 
+        }
+        input:hover {
+            background-color: darkorange; 
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); 
+            transform: scale(1.05);
+        }
+
+        #calc {
+            width: 250px;
+            border: 5px solid black; 
+            border-radius: 3px;
+            padding: 20px;
+            margin: auto;
+            background-color: white;
+            color: black; 
+            font-size: 20px;
+            text-align: right;
+        }
+
+        /* Dark Mode */
+        .dark-mode {
+            text-align: left;
+            background-color: black;
+            color: white;
+        }
+        .dark-mode input {
+            background-color: gray;
+            color: white;
+        }
+        .dark-mode #calc {
+            background-color: black;
+            color: white;
+        }
+
+        /* Light Mode */
+        .light-mode {
+            text-align: left;
+            background-color: white;
+            color: black;
+        }
+        .light-mode input {
+            background-color: orange;
+            color: white;
+        }
+        .light-mode #calc {
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1 id="dark"></h1>
+        <button onclick="darkmode()">Dark Mode</button>
+        <button onclick="lightmode()">Light Mode</button>
+    </div>
+    
+    <h1> Simple Calculator </h1>
+    <div class="formstyle">
+        <form name="form1">
+            <input id="calc" type="text" name="answer" readonly> <br> <br>
+            <input type="button" value="1" onclick="form1.answer.value += '1' ">
+            <input type="button" value="2" onclick="form1.answer.value += '2' ">
+            <input type="button" value="3" onclick="form1.answer.value += '3' ">
+            <input type="button" value="+" onclick="form1.answer.value += '+' ">
+            <br> <br>
+            <input type="button" value="4" onclick="form1.answer.value += '4' ">
+            <input type="button" value="5" onclick="form1.answer.value += '5' ">
+            <input type="button" value="6" onclick="form1.answer.value += '6' ">
+            <input type="button" value="-" onclick="form1.answer.value += '-' ">
+            <br> <br>
+            <input type="button" value="7" onclick="form1.answer.value += '7' ">
+            <input type="button" value="8" onclick="form1.answer.value += '8' ">
+            <input type="button" value="9" onclick="form1.answer.value += '9' ">
+            <input type="button" value="*" onclick="form1.answer.value += '*' ">
+            <br> <br>
+            <input type="button" value="/" onclick="form1.answer.value += '/' ">
+            <input type="button" value="0" onclick="form1.answer.value += '0' ">
+            <input type="button" value="." onclick="form1.answer.value += '.' ">
+            <input type="button" value="=" onclick="form1.answer.value = eval(form1.answer.value)">
+            <br>
+            <input type="button" value="Clear All" onclick="form1.answer.value = '' " id="clear">
+            <br>
+        </form>
+    </div>
+    <script>
+        function darkmode() {
+            document.body.className = "dark-mode";
+           // document.getElementById("dark").innerText = "Dark Mode Activated";
+        }
+        function lightmode() {
+            document.body.className = "light-mode";
+           // document.getElementById("dark").innerText = "Light Mode Activated";
+        }
+    </script>
+</body>
+</html>
