@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <style>
-        body{
+        body {
             background-color: black;
         }
         h1 {
@@ -23,8 +23,20 @@
         .div {
             text-align: center;
         }
-        .marquee{
+        .marquee {
             color: aliceblue;
+        }
+        .cart-section {
+            background-color: white;
+            color: black;
+            padding: 20px;
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 300px;
+            height: 100%;
+            overflow-y: auto;
+            display: none;
         }
     </style>
 </head>
@@ -33,9 +45,10 @@
         <div class="div">
             <h1>Men's Pants</h1>
             <br>
-            <input type="number" id="min" placeholder="min value">
-            <input type="number" id="max" placeholder="max value">
-            <input type="button" class="submit" value="filter">
+            <input type="number" id="min" placeholder="Min Value">
+            <input type="number" id="max" placeholder="Max Value">
+            <input type="button" class="submit btn btn-success" value="Filter">
+            <button id="reset-filter" class="btn btn-primary">show-cart</button>
         </div>
         <div class="main">
             <br>
@@ -44,76 +57,93 @@
                 <div class="col-12 col-lg-4" data-value="5600">
                     <img src="https://ghpc.in/cdn/shop/files/ghpc-polyester-pin-checks-pant-for-men-beige-ghpc-1-35288246223124.jpg?v=1705235846&width=2048" alt="" height="300px" width="300px">
                     <p>Title: Power Kalyan Pants</p>
-                    <p>brand:Levi's</p>
+                    <p>Brand: Levi's</p>
                     <p>Price: 5600</p>
-                    <button class="btn btn-primary">Add to Cart</button>
+                    <button class="btn btn-primary add-to-cart">Add to Cart</button>
                 </div>
                 <div class="col-12 col-lg-4" data-value="3600">
                     <img src="https://kartvart.in/cdn/shop/files/Slim_Fit_Twill_Lycra_Trouser_For_Men_Black_and_Grey_Combo__Stretchable__H87U7OIO9B_2023-09-29_2.webp?v=1710316585&width=1445" alt="" height="300px" width="300px">
                     <p>Title: Mahesh Babu Pants</p>
-                    <p>brand:Wrangler</p>
+                    <p>Brand: Wrangler</p>
                     <p>Price: 3600</p>
-                    <button class="btn btn-primary">Add to Cart</button>
+                    <button class="btn btn-primary add-to-cart">Add to Cart</button>
                 </div>
                 <div class="col-12 col-lg-4" data-value="1300">
                     <img src="https://www.jiomart.com/images/product/original/rvsmmpge4h/jeenay-synthetic-formal-pants-for-men-mens-fashion-wrinkle-free-stylish-slim-fit-men-s-wear-trouser-pant-for-office-or-party-40-us-sky-blue-product-images-rvsmmpge4h-0-202308130048.jpg?im=Resize=(500,630)" alt="" height="300px" width="300px">
                     <p>Title: Men's Pants</p>
-                    <p>brand:Lee Cooper</p>
+                    <p>Brand: Lee Cooper</p>
                     <p>Price: 1300</p>
-                    <button class="btn btn-primary">Add to Cart</button>
+                    <button class="btn btn-primary add-to-cart">Add to Cart</button>
                 </div>
                 <div class="col-12 col-lg-4" data-value="1600">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAVVFDBVswCLlQlL8BVYCMOTxt--ZHCcTADA&s" alt="" height="300px" width="300px">
                     <p>Title: Men's Pants</p>
-                    <p>brand:Flying Machine</p>
+                    <p>Brand: Flying Machine</p>
                     <p>Price: 1600</p>
-                    <button class="btn btn-primary">Add to Cart</button>
+                    <button class="btn btn-primary add-to-cart">Add to Cart</button>
                 </div>
                 <div class="col-12 col-lg-4" data-value="300">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSh1Fk5zYb_SmGoF06QP5lEC7Rvh8C8hZY8JA&s" alt="" height="300px" width="300px">
                     <p>Title: Men's Pants</p>
-                    <p>brand:Flying Machine</p>
+                    <p>Brand: Flying Machine</p>
                     <p>Price: 300</p>
-                    <button class="btn btn-primary">Add to Cart</button>
+                    <button class="btn btn-primary add-to-cart">Add to Cart</button>
                 </div>
                 <div class="col-12 col-lg-4" data-value="800">
                     <img src="https://gokyo.in/cdn/shop/files/K2ColdWeatherTrekking_OutdoorPantsMensBlack_1.jpg?v=1715675326" alt="" height="300px" width="300px">
                     <p>Title: Men's Pants</p>
-                    <p>brand:Pepe Jeans</p>
+                    <p>Brand: Pepe Jeans</p>
                     <p>Price: 800</p>
-                    <button class="btn btn-primary">Add to Cart</button>
+                    <button class="btn btn-primary add-to-cart">Add to Cart</button>
                 </div>
                 <div class="col-12 col-lg-4" data-value="900">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmgbpkqpxr0wUFmfoJWzDcnrxF7bqT8hP13A&s" alt="" height="300px" width="300px">
                     <p>Title: Men's Pants</p>
-                    <p>brand:Diesel</p>
+                    <p>Brand: Diesel</p>
                     <p>Price: 900</p>
-                    <button class="btn btn-primary">Add to Cart</button>
+                    <button class="btn btn-primary add-to-cart">Add to Cart</button>
                 </div>
                 <div class="col-12 col-lg-4" data-value="1000">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6Sq7AxHBsWeALulADUMUzEnTXe_10P81qww&s" alt="" height="300px" width="300px">
                     <p>Title: Men's Pants</p>
-                    <p>brand: Armani</p>
+                    <p>Brand: Armani</p>
                     <p>Price: 1000</p>
-                    <button class="btn btn-primary">Add to Cart</button>
+                    <button class="btn btn-primary add-to-cart">Add to Cart</button>
                 </div>
                 <div class="col-12 col-lg-4" data-value="2800">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhAuG6oxnRyryyV70QLNCTF37ls6PcPGdkTQ&s" alt="" height="300px" width="300px">
-                    <p>Title: Vijay Thalapathy Formals Pants</p>
-                    <p>brand:Spykar</p>
+                    <p>Title: Vijay Thalapathy Formal Pants</p>
+                    <p>Brand: Spykar</p>
                     <p>Price: 2800</p>
-                    <button class="btn btn-primary">Add to Cart</button>
+                    <button class="btn btn-primary add-to-cart">Add to Cart</button>
                 </div>
             </div>
         </div>
     </div>
+    
+    <!-- Cart Section -->
+    <div class="cart-section" id="cart">
+        <h2>Your Cart</h2>
+        <ul id="cart-items"></ul>
+        <p><strong>Total: </strong><span id="cart-total">0</span></p>
+        <button class="btn btn-danger" id="clear-cart">Clear Cart</button>
+        <button class="btn btn-secondary" id="hide-cart">Close Cart</button>
+    </div>
+
     <script>
+        let cart = [];
+        const cartSection = document.getElementById('cart');
+        const cartItemsList = document.getElementById('cart-items');
+        const cartTotal = document.getElementById('cart-total');
+        const resetFilterButton = document.getElementById('reset-filter');
+
         document.querySelector(".submit").addEventListener('click', function() {
             let min = +document.getElementById("min").value;
             let max = +document.getElementById("max").value;
             let products = document.querySelectorAll(".col-12.col-lg-4");
-            if(min>max){
-                alert("Invalid Amount")
+            if (min > max) {
+                alert("Invalid Amount");
+                return;
             }
             products.forEach(function(product) {
                 let price = +product.getAttribute("data-value");
@@ -123,6 +153,47 @@
                     product.style.display = 'none';
                 }
             });
+        });
+
+        resetFilterButton.addEventListener('click', function() {
+            document.getElementById("min").value = '';
+            document.getElementById("max").value = '';
+            let products = document.querySelectorAll(".col-12.col-lg-4");
+            products.forEach(function(product) {
+                product.style.display = 'block';
+            });
+        });
+
+        document.querySelectorAll(".add-to-cart").forEach(button => {
+            button.addEventListener('click', function() {
+                let product = button.parentElement;
+                let title = product.querySelector('p:first-of-type').innerText;
+                let price = +product.getAttribute("data-value");
+                cart.push({ title, price });
+                updateCart();
+                cartSection.style.display = 'block'; // Show the cart when an item is added
+            });
+        });
+
+        function updateCart() {
+            cartItemsList.innerHTML = '';
+            let total = 0;
+            cart.forEach(item => {
+                const li = document.createElement('li');
+                li.innerText = `${item.title} - Price: ${item.price}`;
+                cartItemsList.appendChild(li);
+                total += item.price;
+            });
+            cartTotal.innerText = total;
+        }
+
+        document.getElementById('clear-cart').addEventListener('click', function() {
+            cart = [];
+            updateCart();
+        });
+
+        document.getElementById('hide-cart').addEventListener('click', function() {
+            cartSection.style.display = 'none';
         });
     </script>
 </body>
