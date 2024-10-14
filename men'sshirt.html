@@ -3,123 +3,207 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>men's Shirts</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <title>Men's Shirts</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <style>
-        body{
+        body {
             background-color: black;
         }
-        h1{
+        h1 {
             color: white;
             text-align: center; 
         }
-        p{
+        p {
             color: red;
         }
         .col-12 {
             border: 2px solid white;
         }
-        .div{
+        .div {
             text-align: center;
+        }
+        .cart-section {
+            background-color: white;
+            color: black;
+            padding: 20px;
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 300px;
+            height: 100%;
+            overflow-y: auto;
+            display: none;
         }
     </style>
 </head>
 <body>
     <div class="container-fluid">
         <div class="div">
-            <h1>Men's  Shirts</h1>
+            <h1>Men's Shirts</h1>
             <br>
-            <input type="number" id="min" placeholder="min value:">
-            <input type="number" id="max" placeholder="max value:">
-            <input type="submit" class="submit" value="filter">
+            <input type="number" id="min" placeholder="Min Value:">
+            <input type="number" id="max" placeholder="Max Value:">
+            <input type="submit" class="submit" value="Filter">
+            <button id="show-cart" class="btn btn-primary">show-cart</button>
         </div>
-    <div class="main">
-        <marquee behavior="" direction="right">60% discount</marquee>
-        <div class="row">
-            <div class="col-12 col-lg-4" data-value="5600">
-                <img src="https://w0.peakpx.com/wallpaper/483/269/HD-wallpaper-pspk-pawan-kalyan-agnyaathavaasi-movie-agnyaathavaasi-movei.jpg" alt="" height="300px" width="300px">
-                <p>Title:  power kalyan  Shirts</p>
-                <p>Brand: Arrow</p>
-                <p>Price: 5600</p>
-                <button class="btn btn-primary">Add to Cart</button>
-            </div>
-            <div class="col-12 col-lg-4" data-value="3600">
-                <img src="https://i.pinimg.com/550x/47/d7/7c/47d77caed7e6d2f13bf7dd6491fc3a11.jpg" alt="" height="300px" width="300px">
-                <p>Title:   Mahesh Babu  Shirts</p>
-                <p>Brand: Raymond</p>
-                <p >Price: 3600</p>
-                <button class="btn btn-primary">Add to Cart</button>
-            </div>
-            <div class="col-12 col-lg-4" data-value="1300">
-                <img src="https://plus.unsplash.com/premium_photo-1661627681947-4431c8c97659?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bWVucyUyMHNoaXJ0fGVufDB8fDB8fHww" alt="" height="300px" width="300px">
-                <p>Title:  Men's Shirts</p>
-                <p>Brand:Ozmod</p>
-                <p >Price: 1300</p>
-                <button class="btn btn-primary">Add to Cart</button>
-            </div>
-            <div class="col-12 col-lg-4" data-value="1600">
-                <img src="https://5.imimg.com/data5/SELLER/Default/2023/1/OT/ZS/RY/157298055/corporate-t-shirt-500x500.png" alt="" height="300px" width="300px">
-                <p>Title:  Men's Shirts</p>
-                <p>Brand:Blackberrys</p>
-                <p >Price: 1600</p>
-                <button class="btn btn-primary">Add to Cart</button>
-            </div>
-            <div class="col-12 col-lg-4" data-value="300">
-                <img src="https://5.imimg.com/data5/SELLER/Default/2023/4/302171196/UH/PE/FR/66560041/red-casual-men-shirts.png" alt="" height="300px" width="300px">
-                <p>Title:  Men's Shirts</p>
-                <p>Brand:Peter England</p>
-                <p >Price: 300</p>
-                <button class="btn btn-primary">Add to Cart</button>
-            </div>
-            <div class="col-12 col-lg-4" data-value="800">
-                <img src="https://assets.ajio.com/medias/sys_master/root/20230906/TM1n/64f8c0b7ddf7791519b931cb/-1117Wx1400H-461398365-black-MODEL2.jpg" alt="" height="300px" width="300px">
-                <p>Title:  Men's Shirts</p>
-                <p>Brand:Philippe</p>
-                <p >Price: 800</p>
-                <button class="btn btn-primary">Add to Cart</button>
-            </div>
-            <div class="col-12 col-lg-4"  data-value="900">
-                <img src="https://blackberrys.com/cdn/shop/files/check-formal-shirt-in-brown-fest-blackberrys-clothing-1.jpg?v=1685956076" alt="" height="300px" width="300px">
-                <p>Title:  Men's Shirts</p>
-                <p>Brand:Park Avenue</p>
-                <p> Price: 900</p>
-                <button class="btn btn-primary">Add to Cart</button>
-            </div>
-            <div class="col-12 col-lg-4" data-value="1000">
-                <img src="https://crosscreek.in/cdn/shop/products/CPL1389_7.jpg?v=1652434249&width=1445" alt="" height="300px" width="300px">
-                <p>Title: men's Shirts</p>
-                <p>Brand: Peter England</p>
-                <p >Price: 1000</p>
-                <button class="btn btn-primary">Add to Cart</button>
-            </div>
-            <div class="col-12 col-lg-4" data-value="2800">
-                <img src="https://w0.peakpx.com/wallpaper/931/630/HD-wallpaper-vijay-live-black-formals-with-hammer-black-formals-hammer-actor-south-indian-thumbnail.jpg" alt="" height="300px" width="300px">
-                <p>Title: vijay thalapathy Formals Shirts</p>
-                <p>Brand: Raymond</p>
-                <p >Price: 2800</p>
-                <button class="btn btn-primary">Add to Cart</button>
-            </div>
-        </div> 
+        <div class="main">
+            <marquee behavior="" direction="right">60% discount</marquee>
+            <div class="row">
+                <!-- Product Cards -->
+                <div class="col-12 col-lg-4" data-value="5600" data-title="Power Kalyan Shirts" data-brand="Arrow">
+                    <img src="https://w0.peakpx.com/wallpaper/483/269/HD-wallpaper-pspk-pawan-kalyan-agnyaathavaasi-movie-agnyaathavaasi-movei.jpg" alt="" height="300px" width="300px">
+                    <p>Title: Power Kalyan Shirts</p>
+                    <p>Brand: Arrow</p>
+                    <p>Price: 5600</p>
+                    <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                </div>
+                <div class="col-12 col-lg-4" data-value="3600" data-title="Mahesh Babu Shirts" data-brand="Raymond">
+                    <img src="https://i.pinimg.com/550x/47/d7/7c/47d77caed7e6d2f13bf7dd6491fc3a11.jpg" alt="" height="300px" width="300px">
+                    <p>Title: Mahesh Babu Shirts</p>
+                    <p>Brand: Raymond</p>
+                    <p>Price: 3600</p>
+                    <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                </div>
+                <div class="col-12 col-lg-4" data-value="1300" data-title="Ozmod Shirts" data-brand="Ozmod">
+                    <img src="https://plus.unsplash.com/premium_photo-1661627681947-4431c8c97659?fm=jpg&q=60&w=3000" alt="" height="300px" width="300px">
+                    <p>Title: Men's Shirts</p>
+                    <p>Brand: Ozmod</p>
+                    <p>Price: 1300</p>
+                    <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                </div>
+                <div class="col-12 col-lg-4" data-value="1600">
+                    <img src="https://5.imimg.com/data5/SELLER/Default/2023/1/OT/ZS/RY/157298055/corporate-t-shirt-500x500.png" alt="" height="300px" width="300px">
+                    <p>Title:  Men's Shirts</p>
+                    <p>Brand:Blackberrys</p>
+                    <p >Price: 1600</p>
+                    <button class="btn btn-primary">Add to Cart</button>
+                </div>
+                <div class="col-12 col-lg-4" data-value="300">
+                    <img src="https://5.imimg.com/data5/SELLER/Default/2023/4/302171196/UH/PE/FR/66560041/red-casual-men-shirts.png" alt="" height="300px" width="300px">
+                    <p>Title:  Men's Shirts</p>
+                    <p>Brand:Peter England</p>
+                    <p >Price: 300</p>
+                    <button class="btn btn-primary">Add to Cart</button>
+                </div>
+                <div class="col-12 col-lg-4" data-value="800">
+                    <img src="https://assets.ajio.com/medias/sys_master/root/20230906/TM1n/64f8c0b7ddf7791519b931cb/-1117Wx1400H-461398365-black-MODEL2.jpg" alt="" height="300px" width="300px">
+                    <p>Title:  Men's Shirts</p>
+                    <p>Brand:Philippe</p>
+                    <p >Price: 800</p>
+                    <button class="btn btn-primary">Add to Cart</button>
+                </div>
+                <div class="col-12 col-lg-4"  data-value="900">
+                    <img src="https://blackberrys.com/cdn/shop/files/check-formal-shirt-in-brown-fest-blackberrys-clothing-1.jpg?v=1685956076" alt="" height="300px" width="300px">
+                    <p>Title:  Men's Shirts</p>
+                    <p>Brand:Park Avenue</p>
+                    <p> Price: 900</p>
+                    <button class="btn btn-primary">Add to Cart</button>
+                </div>
+                <div class="col-12 col-lg-4" data-value="1000">
+                    <img src="https://crosscreek.in/cdn/shop/products/CPL1389_7.jpg?v=1652434249&width=1445" alt="" height="300px" width="300px">
+                    <p>Title: men's Shirts</p>
+                    <p>Brand: Peter England</p>
+                    <p >Price: 1000</p>
+                    <button class="btn btn-primary">Add to Cart</button>
+                </div>
+                <div class="col-12 col-lg-4" data-value="2800">
+                    <img src="https://w0.peakpx.com/wallpaper/931/630/HD-wallpaper-vijay-live-black-formals-with-hammer-black-formals-hammer-actor-south-indian-thumbnail.jpg" alt="" height="300px" width="300px">
+                    <p>Title: vijay thalapathy Formals Shirts</p>
+                    <p>Brand: Raymond</p>
+                    <p >Price: 2800</p>
+                    <button class="btn btn-primary">Add to Cart</button>
+                </div>
+                <!-- Add more products similarly -->
+            </div> 
+        </div>
     </div>
-</div>
-<script>
-    document.querySelector(".submit").addEventListener('click', function() {
-        let min = +document.getElementById("min").value;
-        let max = +document.getElementById("max").value;
-        let products = document.querySelectorAll(".col-12.col-lg-4");
-        if(min>max){
-            alert("Invalid Amount")
-        }
-        products.forEach(function(product) {
-            let price = +product.getAttribute("data-value");
-            if (price >= min && price <= max) {
-                product.style.display = 'block';
-            } else {
-                product.style.display = 'none';
-            }
+
+    <!-- Cart Section -->
+    <div class="cart-section" id="cart">
+        <h2>Your Cart</h2>
+        <ul id="cart-items"></ul>
+        <p><strong>Total: </strong><span id="cart-total">0</span></p>
+        <button class="btn btn-danger" id="clear-cart">Clear Cart</button>
+        <button class="btn btn-secondary" id="hide-cart">Close Cart</button>
+    </div>
+
+    <script>
+        let cart = [];
+        const cartSection = document.getElementById('cart');
+        const cartItemsList = document.getElementById('cart-items');
+        const cartTotal = document.getElementById('cart-total');
+        const showCartButton = document.getElementById('show-cart');
+        const hideCartButton = document.getElementById('hide-cart');
+        const clearCartButton = document.getElementById('clear-cart');
+
+        // Show the cart
+        showCartButton.addEventListener('click', () => {
+            cartSection.style.display = 'block';
         });
-    });
-</script>
+
+        // Hide the cart
+        hideCartButton.addEventListener('click', () => {
+            cartSection.style.display = 'none';
+        });
+
+        // Clear the cart
+        clearCartButton.addEventListener('click', () => {
+            cart = [];
+            updateCart();
+        });
+
+        // Add to cart functionality
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', function() {
+                let productCard = this.parentElement;
+                let title = productCard.getAttribute('data-title');
+                let price = parseFloat(productCard.getAttribute('data-value'));
+
+                // Add the product to the cart
+                cart.push({ title, price });
+                updateCart();
+            });
+        });
+
+        // Update the cart display
+        function updateCart() {
+            // Clear the existing cart items
+            cartItemsList.innerHTML = '';
+            let total = 0;
+
+            // Display each item in the cart
+            cart.forEach(item => {
+                let li = document.createElement('li');
+                li.textContent = `${item.title} - $${item.price}`;
+                cartItemsList.appendChild(li);
+                total += item.price;
+            });
+
+            // Update the total price
+            cartTotal.textContent = total.toFixed(2);
+        }
+
+        // Filter products by price range
+        document.querySelector('.submit').addEventListener('click', function() {
+            let min = +document.getElementById('min').value;
+            let max = +document.getElementById('max').value;
+            let products = document.querySelectorAll('.col-12.col-lg-4');
+
+            if (min > max) {
+                alert("Invalid Amount");
+                return;
+            }
+
+            products.forEach(function(product) {
+                let price = +product.getAttribute('data-value');
+                if (price >= min && price <= max) {
+                    product.style.display = 'block';
+                } else {
+                    product.style.display = 'none';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
