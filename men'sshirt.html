@@ -139,6 +139,7 @@
         // Show the cart
         showCartButton.addEventListener('click', () => {
             cartSection.style.display = 'block';
+            
         });
 
         // Hide the cart
@@ -158,31 +159,94 @@
                 let productCard = this.parentElement;
                 let title = productCard.getAttribute('data-title');
                 let price = parseFloat(productCard.getAttribute('data-value'));
-
+                let imgSrc = productCard.querySelector('img').getAttribute('src'); // Get image URL
                 // Add the product to the cart
-                cart.push({ title, price });
+            
+                let existingItem = cart.find(item => item.title === title);
+
+        if (existingItem) {
+            // If the item is already in the cart, increase its quantity
+            existingItem.quantity += 1;
+        } else {
+            // If the item is new, add it with quantity 1
+            cart.push({ title, price, imgSrc, quantity: 1 });
+        }
+                alert("product is added");
                 updateCart();
+               
             });
         });
 
         // Update the cart display
-        function updateCart() {
-            // Clear the existing cart items
-            cartItemsList.innerHTML = '';
-            let total = 0;
+        // Update the cart display
+function updateCart() {
+    // Clear the existing cart items
+    cartItemsList.innerHTML = '';
+    let total = 0;
 
-            // Display each item in the cart
-            cart.forEach(item => {
-                let li = document.createElement('li');
-                li.textContent = `${item.title} - ₹${item.price.toLocaleString()}`;
-                cartItemsList.appendChild(li);
-                total += item.price;
-            });
+    // Display each item in the cart
+    cart.forEach(item => {
+        let li = document.createElement('li');
+        li.style.display = 'flex';
+        li.style.alignItems = 'center';
+        li.style.justifyContent = 'space-between'; // Ensure proper spacing
 
-            // Update the total price
-            cartTotal.textContent = total.toFixed(2);
-        }
+        // Create the product image element
+        let img = document.createElement('img');
+        img.src = item.imgSrc;
+        img.alt = item.title;
+        img.style.width = '50px';
+        img.style.marginRight = '10px';
 
+        // Add product details (image, title, price)
+        let productText = document.createElement('span');
+        productText.textContent = `${item.title} - ₹${item.price.toLocaleString()} (x${item.quantity})`;
+
+        // Create quantity controls
+        let quantityControls = document.createElement('div');
+        quantityControls.style.display = 'flex';
+        quantityControls.style.alignItems = 'center';
+
+        // Decrease button
+        let decreaseButton = document.createElement('button');
+        decreaseButton.textContent = '-';
+        decreaseButton.classList.add('btn', 'btn-sm', 'btn-danger');
+        decreaseButton.style.marginRight = '5px';
+        decreaseButton.addEventListener('click', () => {
+            if (item.quantity > 1) {
+                item.quantity -= 1;
+            } else {
+                cart = cart.filter(cartItem => cartItem.title !== item.title); // Remove item from cart
+            }
+            updateCart();
+        });
+
+        // Increase button
+        let increaseButton = document.createElement('button');
+        increaseButton.textContent = '+';
+        increaseButton.classList.add('btn', 'btn-sm', 'btn-success');
+        increaseButton.style.marginLeft = '5px';
+        increaseButton.addEventListener('click', () => {
+            item.quantity += 1;
+            updateCart();
+        });
+
+        quantityControls.appendChild(decreaseButton);
+        quantityControls.appendChild(increaseButton);
+
+        // Add image, text, and quantity controls to list item
+        li.appendChild(img);
+        li.appendChild(productText);
+        li.appendChild(quantityControls);
+
+        cartItemsList.appendChild(li);
+
+        // Update the total price
+        total += item.price * item.quantity;
+    });
+
+    cartTotal.textContent = total.toFixed(2);
+}       
         // Filter products by price range
         document.querySelector('.submit').addEventListener('click', function() {
             let min = +document.getElementById('min').value;
