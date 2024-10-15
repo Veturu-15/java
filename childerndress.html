@@ -4,122 +4,269 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>childern dress</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <style>
-        body{
-            background-color: rgb(133, 104, 176);
+        body {
+            background-color:white;
         }
-        h1{
+        h1 {
             color: white;
             text-align: center; 
         }
-        p{
-            color: yellow;
+        p {
+            color: rgb(255, 191, 0);
         }
         .col-12 {
-            border: 2px solid black;
+            border: 2px solid white;
         }
-        .div{
+        .div {
             text-align: center;
+        }
+        .cart-section {
+            background-color: white;
+            color: black;
+            padding: 20px;
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 300px;
+            height: 100%;
+            overflow-y: auto;
+            display: none;
         }
     </style>
 </head>
 <body>
     <div class="container-fluid">
         <div class="div">
-            <h1>Childern Dress</h1>
-        <br>
-            <input type="number" id="min" placeholder="min value:">
-            <input type="number" id="max" placeholder="max value:">
-            <input type="submit" class="submit" value="filter">
+            <h1>childern dress</h1>
+            <br>
+            <input type="number" id="min" placeholder="Min Value:">
+            <input type="number" id="max" placeholder="Max Value:">
+            <input type="submit" class="submit" value="Filter">
+            <button id="show-cart" class="btn btn-primary">Show Cart</button>
         </div>
-    <div class="main">
-        <marquee behavior="" direction="right">30% discount on childern dress</marquee>
-        <div class="row">
-            <div class="col-12 col-lg-4" data-value="5600">
-                <img src="https://img.freepik.com/free-photo/little-asian-girl-smiling-portrait_23-2149123018.jpg?t=st=1728521765~exp=1728525365~hmac=c20580e70a8b5d004319e121a169228112a531786b56d597b5da002568d8085b&w=996" alt="" height="300px" width="300px">
-                <p>Brand: H&M</p>
-                <p>Title:  Women Dress</p>
-                <p >Price: 5600</p>
-                <button class="btn btn-primary">Add to Cart</button>
-            </div>
-            <div class="col-12 col-lg-4"  data-value="3600">
-                <img src="https://img.freepik.com/free-photo/girl-with-happy-expression_23-2147982495.jpg?ga=GA1.1.63009701.1726841536&semt=ais_hybrid" alt="" height="300px" width="300px">
-                <p>Brand:Zara</p>
-                <p>Title: Women Dress</p>
-                <p>Price: 3600</p>
-                <button class="btn btn-primary">Add to Cart</button>
-            </div>
-            <div class="col-12 col-lg-4" data-value="1300">
-                <img src="https://img.freepik.com/free-photo/full-length-portrait-cute-little-girl-hat_171337-13768.jpg?ga=GA1.1.63009701.1726841536&semt=ais_hybrid" alt="" height="300px" width="300px">
-                <p>Brand:vara</p>
-                <p>Title:Women Dress </p>
-                <p >Price: 1300</p>
-                <button class="btn btn-primary">Add to Cart</button>
-            </div>
-            <div class="col-12 col-lg-4" data-value="1600">
-                <img src="https://img.freepik.com/premium-photo/pink-yellow-dress-with-polka-dots-pink-white-polka-dot-dress_979014-27419.jpg?ga=GA1.1.63009701.1726841536&semt=ais_hybrid" alt="" height="300px" width="300px">
-                <p>Brand:Fabindia</p>
-                <p>Title: Women Dress</p>
-                <p >Price: 1600</p>
-                <button class="btn btn-primary">Add to Cart</button>
-            </div>
-            <div class="col-12 col-lg-4" data-value="300">
-                <img src="https://img.freepik.com/free-photo/little-girl-studio_1303-5617.jpg?ga=GA1.1.63009701.1726841536&semt=ais_hybrid" alt="" height="300px" width="300px">
-                <p>Brand:Forever 21</p>
-                <p>Title:  Women Dress</p>
-                <p >Price: 300</p>
-                <button class="btn btn-primary">Add to Cart</button>
-            </div>
-            <div class="col-12 col-lg-4" data-value="800">
-                <img src="https://img.freepik.com/free-photo/lovely-girl-with-dress-pigtails-hairstyle_23-2148356610.jpg?ga=GA1.1.63009701.1726841536&semt=ais_hybrid" alt="" height="300px" width="300px">
-                <p>Brand:Fabindia</p>
-                <p>Title: womens Dress</p>
-                <p >Price: 800</p>
-                <button class="btn btn-primary">Add to Cart</button>
-            </div>
-            <div class="col-12 col-lg-4" data-value="900">
-                <img src="https://img.freepik.com/premium-photo/girl-pink-dress-stands-front-white-background_1265719-1323.jpg?w=740" alt="" height="300px" width="300px">
-                <p>Brand:Trent Limited</p>
-                <p>Title:  womens dress</p>
-                <p >Price: 900</p>
-                <button class="btn btn-primary">Add to Cart</button>
-            </div>
-            <div class="col-12 col-lg-4" data-value="1000">
-                <img src="https://img.freepik.com/free-photo/little-girl-cute-dress_1303-13479.jpg?ga=GA1.1.63009701.1726841536&semt=ais_hybrid" alt="" height="300px" width="300px">
-                <p>Brand:Trent vara</p>
-                <p>Title: womens Dress</p>
-                <p >Price: 1000</p>
-                <button class="btn btn-primary">Add to Cart</button>
-            </div>
-            <div class="col-12 col-lg-4"data-value="2800">
-                <img src="https://img.freepik.com/premium-photo/young-girl-wearing-dress-with-word-it_1087688-1069.jpg?ga=GA1.1.63009701.1726841536&semt=ais_hybrid" alt="" height="300px" width="300px">
-                <p>Brand: Aurelia</p>
-                <p>Title:women Dress </p>
-                <p >Price: 2800</p>
-                <button class="btn btn-primary">Add to Cart</button>
-            </div>
-        </div> 
+        <div class="main">
+            <marquee behavior="" direction="right">60% discount</marquee>
+            <div class="row">
+                <!-- Product Cards -->
+                <div class="col-12 col-lg-4" data-value="600" data-title="Symbol Premium Women's" data-brand="H&M">
+                    <img src="https://m.media-amazon.com/images/I/51rEeJfCTTL.jpg" alt="" height="300px" width="300px">
+                    <p>Title: Symbol Premium Women's</p>
+                    <p>Brand: H&M</p>
+                    <p>Price: ₹600</p>
+                    <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                </div>
+                <div class="col-12 col-lg-4" data-value="1000" data-title="BRELUXIA Cargo  for Women" data-brand="Trent zara">
+                    <img src="https://m.media-amazon.com/images/I/61juBFtP9jL._SY879_.jpg" alt="" height="300px" width="300px">
+                    <p>Title: BRELUXIA Cargo  for Women</p>
+                    <p>Brand: Trent zara</p>
+                    <p>Price: ₹1000</p>
+                    <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                </div>
+                <div class="col-12 col-lg-4" data-value="600" data-title="DIGITAL SHOPEE Women Regular" data-brand="Fabindia">
+                    <img src="https://m.media-amazon.com/images/I/51WJ+PTeYFL._SY879_.jpg" alt="" height="300px" width="300px">
+                    <p>Title: DIGITAL SHOPEE Women Regular</p>
+                    <p>Brand: Fabindia</p>
+                    <p>Price: ₹600</p>
+                    <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                </div>
+                <div class="col-12 col-lg-4" data-value="1600" data-title="Leriya Fashion" data-brand="Trent vara">
+                    <img src="https://m.media-amazon.com/images/I/71Fmf+0LKwL._SY879_.jpg" alt="" height="300px" width="300px">
+                    <p>Title: Leriya Fashion</p>
+                    <p>Brand: Trent vara</p>
+                    <p>Price: ₹1,600</p>
+                    <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                </div>
+                <div class="col-12 col-lg-4" data-value="300" data-title="Leriya Fashion Western  " data-brand="zara">
+                    <img src="https://m.media-amazon.com/images/I/41NytFEV2CL._SY741_.jpg" alt="" height="300px" width="300px">
+                    <p>Title: Leriya Fashion Western  </p>
+                    <p>Brand: zara</p>
+                    <p>Price: ₹300</p>
+                    <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                </div>
+                <div class="col-12 col-lg-4" data-value="800" data-title="Leriya Fashion High-Waisted Regular " data-brand="Fabindia">
+                    <img src="https://m.media-amazon.com/images/I/81X9VbDLq7L._SY741_.jpg" alt="" height="300px" width="300px">
+                    <p>Title:Leriya Fashion High-Waisted Regular</p>
+                    <p>Brand:Fabindia</p>
+                    <p>Price: ₹800</p>
+                    <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                </div>
+                <div class="col-12 col-lg-4" data-value="900" data-title="LITVA Premium Women's " data-brand="H&M">
+                    <img src="https://m.media-amazon.com/images/I/81sinvHdUCL._SX679_.jpg" alt="" height="300px" width="300px">
+                    <p>Title: LITVA Premium Women's </p>
+                    <p>Brand: H&M</p>
+                    <p>Price: ₹900</p>
+                    <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                </div>
+                <div class="col-12 col-lg-4" data-value="1000" data-title=" Amazon Brand - Myx Women Cotton" data-brand="vara">
+                    <img src="https://m.media-amazon.com/images/I/713BcQ++ZBL._SY879_.jpg" alt="" height="300px" width="300px">
+                    <p>Title: Amazon Brand - Myx Women Cotton </p>
+                    <p>Brand: vara</p>
+                    <p>Price: ₹1,000</p>
+                    <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                </div>
+                <div class="col-12 col-lg-4" data-value="2800" data-title="TOPLOT Cotton " data-brand="Fabindia"> 
+                    <img src="https://m.media-amazon.com/images/I/51vilHOi0zL.jpg" alt="" height="300px" width="300px">
+                    <p>Title: TOPLOT Cotton </p>
+                    <p>Brand: Fabindia</p>
+                    <p>Price: ₹2,800</p>
+                    <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                </div>
+            </div> 
+        </div>
     </div>
-</div>
-<script>
-    document.querySelector(".submit").addEventListener('click', function() {
-        let min = +document.getElementById("min").value;
-        let max = +document.getElementById("max").value;
-        let products = document.querySelectorAll(".col-12.col-lg-4");
-        if(min>max){
-            alert("Invalid Amount")
-        }
-        products.forEach(function(product) {
-            let price = +product.getAttribute("data-value");
-            if (price >= min && price <= max) {
-                product.style.display = 'block';
-            } else {
-                product.style.display = 'none';
-            }
+
+    <!-- Cart Section -->
+    <div class="cart-section" id="cart">
+        <h2>Your Cart</h2>
+        <ul id="cart-items"></ul>
+        <p><strong>Total: </strong><span id="cart-total">0</span></p>
+        <button class="btn btn-danger" id="clear-cart">Clear Cart</button>
+        <button class="btn btn-secondary" id="hide-cart">Close Cart</button>
+    </div>
+
+    <script>
+        let cart = [];
+        const cartSection = document.getElementById('cart');
+        const cartItemsList = document.getElementById('cart-items');
+        const cartTotal = document.getElementById('cart-total');
+        const showCartButton = document.getElementById('show-cart');
+        const hideCartButton = document.getElementById('hide-cart');
+        const clearCartButton = document.getElementById('clear-cart');
+
+        // Show the cart
+        showCartButton.addEventListener('click', () => {
+            cartSection.style.display = 'block';
+            
         });
+
+        // Hide the cart
+        hideCartButton.addEventListener('click', () => {
+            cartSection.style.display = 'none';
+        });
+
+        // Clear the cart
+        clearCartButton.addEventListener('click', () => {
+            cart = [];
+            updateCart();
+        });
+
+        // Add to cart functionality
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', function() {
+                let productCard = this.parentElement;
+                let title = productCard.getAttribute('data-title');
+                let price = parseFloat(productCard.getAttribute('data-value'));
+                let imgSrc = productCard.querySelector('img').getAttribute('src'); // Get image URL
+                // Add the product to the cart
+            
+                let existingItem = cart.find(item => item.title === title);
+
+        if (existingItem) {
+            // If the item is already in the cart, increase its quantity
+            existingItem.quantity += 1;
+        } else {
+            // If the item is new, add it with quantity 1
+            cart.push({ title, price, imgSrc, quantity: 1 });
+        }
+                alert("product is added");
+                updateCart();
+               
+            });
+        });
+
+        // Update the cart display
+        // Update the cart display
+function updateCart() {
+    // Clear the existing cart items
+    cartItemsList.innerHTML = '';
+    let total = 0;
+
+    // Display each item in the cart
+    cart.forEach(item => {
+        let li = document.createElement('li');
+        li.style.display = 'flex';
+        li.style.alignItems = 'center';
+        li.style.justifyContent = 'space-between'; // Ensure proper spacing
+
+        // Create the product image element
+        let img = document.createElement('img');
+        img.src = item.imgSrc;
+        img.alt = item.title;
+        img.style.width = '50px';
+        img.style.marginRight = '10px';
+
+        // Add product details (image, title, price)
+        let productText = document.createElement('span');
+        productText.textContent = `${item.title} - ₹${item.price.toLocaleString()} (x${item.quantity})`;
+
+        // Create quantity controls
+        let quantityControls = document.createElement('div');
+        quantityControls.style.display = 'flex';
+        quantityControls.style.alignItems = 'center';
+
+        // Decrease button
+        let decreaseButton = document.createElement('button');
+        decreaseButton.textContent = '-';
+        decreaseButton.classList.add('btn', 'btn-sm', 'btn-danger');
+        decreaseButton.style.marginRight = '5px';
+        decreaseButton.addEventListener('click', () => {
+            if (item.quantity > 1) {
+                item.quantity -= 1;
+            } else {
+                cart = cart.filter(cartItem => cartItem.title !== item.title); // Remove item from cart
+            }
+            updateCart();
+        });
+
+        // Increase button
+        let increaseButton = document.createElement('button');
+        increaseButton.textContent = '+';
+        increaseButton.classList.add('btn', 'btn-sm', 'btn-success');
+        increaseButton.style.marginLeft = '5px';
+        increaseButton.addEventListener('click', () => {
+            item.quantity += 1;
+            updateCart();
+        });
+
+        quantityControls.appendChild(decreaseButton);
+        quantityControls.appendChild(increaseButton);
+
+        // Add image, text, and quantity controls to list item
+        li.appendChild(img);
+        li.appendChild(productText);
+        li.appendChild(quantityControls);
+
+        cartItemsList.appendChild(li);
+
+        // Update the total price
+        total += item.price * item.quantity;
     });
-</script>
+
+    cartTotal.textContent = total.toFixed(2);
+}       
+        // Filter products by price range
+        document.querySelector('.submit').addEventListener('click', function() {
+            let min = +document.getElementById('min').value;
+            let max = +document.getElementById('max').value;
+            let products = document.querySelectorAll('.col-12.col-lg-4');
+
+            if (min > max) {
+                alert("Invalid Amount");
+                return;
+            }
+
+            products.forEach(function(product) {
+                let price = +product.getAttribute('data-value');
+                if (price >= min && price <= max) {
+                    product.style.display = 'block';
+                } else {
+                    product.style.display = 'none';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
