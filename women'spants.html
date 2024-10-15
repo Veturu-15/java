@@ -3,26 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>womens Pants</title>
+    <title>Women's Pants</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <style>
         body {
-            background-color: black;
+            background-color:rgb(168, 122, 122);
         }
         h1 {
             color: white;
             text-align: center; 
         }
-        h5{
-            color: white;
-        }
         p {
-            color: red;
+            color: rgb(0, 255, 47);
         }
         .col-12 {
             border: 2px solid white;
-            margin-bottom: 20px;
         }
         .div {
             text-align: center;
@@ -38,25 +34,6 @@
             height: 100%;
             overflow-y: auto;
             display: none;
-            z-index: 1000; /* Ensure cart is on top */
-        }
-        /* Beauty Mode Styles */
-        .beauty-mode {
-            background-color: #f5f5f5 !important;
-        }
-        .beauty-mode h1 {
-            color: #ff4081 !important;
-        }
-        .beauty-mode p {
-            color: #333 !important;
-        }
-        .beauty-mode .cart-section {
-            background-color: #ffefef !important;
-            color: #333 !important;
-        }
-        .beauty-mode button {
-            background-color: #ff4081 !important;
-            border: none !important;
         }
     </style>
 </head>
@@ -65,139 +42,231 @@
         <div class="div">
             <h1>Women's Pants</h1>
             <br>
-            <input type="number" placeholder="min value:" id="min" class="mb-2">
-            <input type="number" placeholder="max value:" id="max" class="mb-2">
-            <button id="filter-button" class="btn btn-primary mb-2">Filter</button>
-            <button id="show-cart" class="btn btn-secondary">Show Cart</button>
+            <input type="number" id="min" placeholder="Min Value:">
+            <input type="number" id="max" placeholder="Max Value:">
+            <input type="submit" class="submit" value="Filter">
+            <button id="show-cart" class="btn btn-primary">Show Cart</button>
         </div>
         <div class="main">
-            <marquee behavior="" direction="right">Exclusive Offers on Beauty Products!</marquee>
-            <div class="row" id="product-list">
+            <marquee behavior="" direction="right">60% discount</marquee>
+            <div class="row">
                 <!-- Product Cards -->
-                <div class="col-12 col-lg-4 product-card" data-value="1200" data-title="Women Pants" data-brand=" Shaurya Sanadhya">
-                   <img src="data:image/jpeg;base64,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" alt="Lipstick" class="img-fluid" height="300px" width="300px">
-                   <h5>Women Pants</h5>
-                   <p>Brand: Shaurya Sanadhya</p>
-                   <p>Price: $1200</p>
-                   <button class="btn btn-info add-to-cart">Add to Cart</button>
-                </div>
-                <div class="col-12 col-lg-4 product-card" data-value="1500" data-title="Women Pants" data-brand="H&M">
-                   <img src="https://img.freepik.com/free-photo/girl_1303-4477.jpg?ga=GA1.1.63009701.1726841536&semt=ais_hybrid" alt="Foundation" class="img-fluid" height="300px" width="300px">
-                   <h5>Women Pants</h5>
-                   <p>Brand: H&M</p>
-                   <p>Price: $1500</p>
-                   <button class="btn btn-info add-to-cart">Add to Cart</button>
-                </div>
-                <div class="col-12 col-lg-4 product-card" data-value="500" data-title="Women Pants" data-brand="Fabindia">
-                    <img src="https://img.freepik.com/premium-photo/business-clothes-woman_1246590-7605.jpg?ga=GA1.1.63009701.1726841536&semt=ais_hybrid" alt="Foundation" class="img-fluid" height="300px" width="300px">
-                    <h5>Women Pants</h5>
-                    <p>Brand:Fabindia</p>
-                    <p>Price: $500</p>
-                    <button class="btn btn-info add-to-cart">Add to Cart</button>
-                 </div>
-                 <div class="col-12 col-lg-4 product-card" data-value="800" data-title="Women Pants " data-brand="Zara">
-                    <img src="https://m.media-amazon.com/images/I/61AXDyhk6fL._SY879_.jpg" alt="Foundation" class="img-fluid" height="300px" width="300px">
-                    <h5>Women Pants </h5>
-                    <p>Brand: Zara</p>
-                    <p>Price: $800</p>
-                    <button class="btn btn-info add-to-cart">Add to Cart</button>
-                 </div>
-                 <div class="col-12 col-lg-4 product-card" data-value="1000" data-title="Women Pants " data-brand="womens Zara">
-                    <img src="https://m.media-amazon.com/images/I/61C0LGhjqtL._SY741_.jpg" alt="Foundation" class="img-fluid" height="300px" width="300px">
-                    <h5>Women Pants </h5>
-                    <p>Brand: womens Zara</p>
-                    <p>Price: $1000</p>
-                    <button class="btn btn-info add-to-cart">Add to Cart</button>
-                 </div>
-                 <div class="col-12 col-lg-4 product-card" data-value="1200" data-title="Women Pants " data-brand="womens vara">
-                    <img src="https://m.media-amazon.com/images/I/61jfBIZmcmL._SY879_.jpg" alt="Foundation" class="img-fluid" height="300px" width="300px">
-                    <h5>Women Pants</h5>
-                    <p>Brand: womens vara</p>
-                    <p>Price: $1200</p>
-                    <button class="btn btn-info add-to-cart">Add to Cart</button>
-                 </div>
-                 <div class="col-12 col-lg-4 product-card" data-value="1200" data-title="Women Pants " data-brand="H&My">
-                    <img src="https://m.media-amazon.com/images/I/5146IFHOm4L._SX679_.jpg" alt="Foundation" class="img-fluid" height="300px" width="300px">
-                    <h5>Women Pants </h5>
+                <div class="col-12 col-lg-4" data-value="5600" data-title="Symbol Premium Women's" data-brand="H&M">
+                    <img src="https://m.media-amazon.com/images/I/61wTNqm2BeL._SY879_.jpg" alt="" height="300px" width="300px">
+                    <p>Title: Symbol Premium Women's</p>
                     <p>Brand: H&M</p>
-                    <p>Price: $1200</p>
-                    <button class="btn btn-info add-to-cart">Add to Cart</button>
-                 </div>
-                 <div class="col-12 col-lg-4 product-card" data-value="1200" data-title="Women Pants" data-brand="Fabindia">
-                    <img src="https://m.media-amazon.com/images/I/61kn0x3ACUL._SX679_.jpg" alt="Foundation" class="img-fluid" height="300px" width="300px">
-                    <h5>Women Pants </h5>
-                    <p>Brand: Fabindia</p>
-                    <p>Price: $1200</p>
-                    <button class="btn btn-info add-to-cart">Add to Cart</button>
-                 </div>
-                 <div class="col-12 col-lg-4 product-card" data-value="900" data-title="Women Pants" data-brand="Trent zara">
-                    <img src="https://m.media-amazon.com/images/I/614mAeQ58PL._SY879_.jpg" alt="Foundation" class="img-fluid" height="300px" width="300px">
-                    <h5>Women Pants </h5>
+                    <p>Price: ₹1600</p>
+                    <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                </div>
+                <div class="col-12 col-lg-4" data-value="3600" data-title="BRELUXIA Cargo Pants for Women" data-brand="Trent zara">
+                    <img src="https://m.media-amazon.com/images/I/61C0LGhjqtL._SY879_.jpg" alt="" height="300px" width="300px">
+                    <p>Title: BRELUXIA Cargo Pants for Women</p>
                     <p>Brand: Trent zara</p>
-                    <p>Price: $900</p>
-                    <button class="btn btn-info add-to-cart">Add to Cart</button>
-                 </div>
-            </div>
+                    <p>Price: ₹1000</p>
+                    <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                </div>
+                <div class="col-12 col-lg-4" data-value="1300" data-title="DIGITAL SHOPEE Women Regular" data-brand="Fabindia">
+                    <img src="https://m.media-amazon.com/images/I/71senYLJz7L._SY879_.jpg" alt="" height="300px" width="300px">
+                    <p>Title: DIGITAL SHOPEE Women Regular</p>
+                    <p>Brand: Fabindia</p>
+                    <p>Price: ₹600</p>
+                    <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                </div>
+                <div class="col-12 col-lg-4" data-value="1600" data-title="Leriya Fashion" data-brand="Trent vara">
+                    <img src="https://m.media-amazon.com/images/I/51lH3FicbiL._SY879_.jpg" alt="" height="300px" width="300px">
+                    <p>Title: Leriya Fashion</p>
+                    <p>Brand: Trent vara</p>
+                    <p>Price: ₹1,600</p>
+                    <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                </div>
+                <div class="col-12 col-lg-4" data-value="300" data-title="Leriya Fashion Western Pants " data-brand="zara">
+                    <img src="https://m.media-amazon.com/images/I/61jfBIZmcmL._SY879_.jpg" alt="" height="300px" width="300px">
+                    <p>Title: Leriya Fashion Western Pants </p>
+                    <p>Brand: zara</p>
+                    <p>Price: ₹300</p>
+                    <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                </div>
+                <div class="col-12 col-lg-4" data-value="800" data-title="Leriya Fashion High-Waisted Regular " data-brand="Fabindia">
+                    <img src="https://m.media-amazon.com/images/I/51dxHDN+xqL._SY879_.jpg" alt="" height="300px" width="300px">
+                    <p>Title:Leriya Fashion High-Waisted Regular</p>
+                    <p>Brand:Fabindia</p>
+                    <p>Price: ₹800</p>
+                    <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                </div>
+                <div class="col-12 col-lg-4" data-value="900" data-title="LITVA Premium Women's " data-brand="H&M">
+                    <img src="https://m.media-amazon.com/images/I/6139f-YotpL._SY879_.jpg" alt="" height="300px" width="300px">
+                    <p>Title: LITVA Premium Women's </p>
+                    <p>Brand: H&M</p>
+                    <p>Price: ₹900</p>
+                    <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                </div>
+                <div class="col-12 col-lg-4" data-value="1000" data-title=" Amazon Brand - Myx Women Cotton" data-brand="vara">
+                    <img src="https://m.media-amazon.com/images/I/71zrUEfaDEL._AC_UL480_FMwebp_QL65_.jpg" alt="" height="300px" width="300px">
+                    <p>Title: Amazon Brand - Myx Women Cotton </p>
+                    <p>Brand: vara</p>
+                    <p>Price: ₹1,000</p>
+                    <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                </div>
+                <div class="col-12 col-lg-4" data-value="2800" data-title="TOPLOT Cotton " data-brand="Fabindia"> 
+                    <img src="https://m.media-amazon.com/images/I/41Tu5CFFnmL._SY879_.jpg" alt="" height="300px" width="300px">
+                    <p>Title: TOPLOT Cotton </p>
+                    <p>Brand: Fabindia</p>
+                    <p>Price: ₹2,800</p>
+                    <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                </div>
+            </div> 
         </div>
+    </div>
 
-        <!-- Cart Section -->
-        <div class="cart-section" id="cart-section">
-            <h2>Your Cart</h2>
-            <ul id="cart-items"></ul>
-            <button id="close-cart" class="btn btn-danger">Close Cart</button>
-        </div>
+    <!-- Cart Section -->
+    <div class="cart-section" id="cart">
+        <h2>Your Cart</h2>
+        <ul id="cart-items"></ul>
+        <p><strong>Total: </strong><span id="cart-total">0</span></p>
+        <button class="btn btn-danger" id="clear-cart">Clear Cart</button>
+        <button class="btn btn-secondary" id="hide-cart">Close Cart</button>
     </div>
 
     <script>
         let cart = [];
+        const cartSection = document.getElementById('cart');
+        const cartItemsList = document.getElementById('cart-items');
+        const cartTotal = document.getElementById('cart-total');
+        const showCartButton = document.getElementById('show-cart');
+        const hideCartButton = document.getElementById('hide-cart');
+        const clearCartButton = document.getElementById('clear-cart');
 
-        // Show Cart function
-        document.getElementById('show-cart').onclick = function() {
-            document.getElementById('cart-section').style.display = 'block';
-        };
-
-        // Close Cart function
-        document.getElementById('close-cart').onclick = function() {
-            document.getElementById('cart-section').style.display = 'none';
-        };
-
-        // Add to Cart function
-        document.querySelectorAll('.add-to-cart').forEach(button => {
-            button.onclick = function() {
-                const productCard = this.closest('.product-card');
-                const title = productCard.getAttribute('data-title');
-                const price = productCard.getAttribute('data-value');
-                cart.push({ title, price });
-                updateCart();
-            };
+        // Show the cart
+        showCartButton.addEventListener('click', () => {
+            cartSection.style.display = 'block';
+            
         });
 
-        // Update Cart display
-        function updateCart() {
-            const cartItemsContainer = document.getElementById('cart-items');
-            cartItemsContainer.innerHTML = '';
-            cart.forEach(item => {
-                const li = document.createElement('li');
-                li.textContent = `${item.title} - $${item.price}`;
-                cartItemsContainer.appendChild(li);
-            });
+        // Hide the cart
+        hideCartButton.addEventListener('click', () => {
+            cartSection.style.display = 'none';
+        });
+
+        // Clear the cart
+        clearCartButton.addEventListener('click', () => {
+            cart = [];
+            updateCart();
+        });
+
+        // Add to cart functionality
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', function() {
+                let productCard = this.parentElement;
+                let title = productCard.getAttribute('data-title');
+                let price = parseFloat(productCard.getAttribute('data-value'));
+                let imgSrc = productCard.querySelector('img').getAttribute('src'); // Get image URL
+                // Add the product to the cart
+            
+                let existingItem = cart.find(item => item.title === title);
+
+        if (existingItem) {
+            // If the item is already in the cart, increase its quantity
+            existingItem.quantity += 1;
+        } else {
+            // If the item is new, add it with quantity 1
+            cart.push({ title, price, imgSrc, quantity: 1 });
         }
+                alert("product is added");
+                updateCart();
+               
+            });
+        });
 
-        // Filter function
-        document.getElementById('filter-button').onclick = function() {
-            const minValue = parseFloat(document.getElementById('min').value);
-            const maxValue = parseFloat(document.getElementById('max').value);
-            const products = document.querySelectorAll('.product-card');
+        // Update the cart display
+        // Update the cart display
+function updateCart() {
+    // Clear the existing cart items
+    cartItemsList.innerHTML = '';
+    let total = 0;
 
-            products.forEach(product => {
-                const productValue = parseFloat(product.getAttribute('data-value'));
-                if ((isNaN(minValue) || productValue >= minValue) && (isNaN(maxValue) || productValue <= maxValue)) {
-                    product.style.display = 'block'; // Show product
+    // Display each item in the cart
+    cart.forEach(item => {
+        let li = document.createElement('li');
+        li.style.display = 'flex';
+        li.style.alignItems = 'center';
+        li.style.justifyContent = 'space-between'; // Ensure proper spacing
+
+        // Create the product image element
+        let img = document.createElement('img');
+        img.src = item.imgSrc;
+        img.alt = item.title;
+        img.style.width = '50px';
+        img.style.marginRight = '10px';
+
+        // Add product details (image, title, price)
+        let productText = document.createElement('span');
+        productText.textContent = `${item.title} - ₹${item.price.toLocaleString()} (x${item.quantity})`;
+
+        // Create quantity controls
+        let quantityControls = document.createElement('div');
+        quantityControls.style.display = 'flex';
+        quantityControls.style.alignItems = 'center';
+
+        // Decrease button
+        let decreaseButton = document.createElement('button');
+        decreaseButton.textContent = '-';
+        decreaseButton.classList.add('btn', 'btn-sm', 'btn-danger');
+        decreaseButton.style.marginRight = '5px';
+        decreaseButton.addEventListener('click', () => {
+            if (item.quantity > 1) {
+                item.quantity -= 1;
+            } else {
+                cart = cart.filter(cartItem => cartItem.title !== item.title); // Remove item from cart
+            }
+            updateCart();
+        });
+
+        // Increase button
+        let increaseButton = document.createElement('button');
+        increaseButton.textContent = '+';
+        increaseButton.classList.add('btn', 'btn-sm', 'btn-success');
+        increaseButton.style.marginLeft = '5px';
+        increaseButton.addEventListener('click', () => {
+            item.quantity += 1;
+            updateCart();
+        });
+
+        quantityControls.appendChild(decreaseButton);
+        quantityControls.appendChild(increaseButton);
+
+        // Add image, text, and quantity controls to list item
+        li.appendChild(img);
+        li.appendChild(productText);
+        li.appendChild(quantityControls);
+
+        cartItemsList.appendChild(li);
+
+        // Update the total price
+        total += item.price * item.quantity;
+    });
+
+    cartTotal.textContent = total.toFixed(2);
+}       
+        // Filter products by price range
+        document.querySelector('.submit').addEventListener('click', function() {
+            let min = +document.getElementById('min').value;
+            let max = +document.getElementById('max').value;
+            let products = document.querySelectorAll('.col-12.col-lg-4');
+
+            if (min > max) {
+                alert("Invalid Amount");
+                return;
+            }
+
+            products.forEach(function(product) {
+                let price = +product.getAttribute('data-value');
+                if (price >= min && price <= max) {
+                    product.style.display = 'block';
                 } else {
-                    product.style.display = 'none'; // Hide product
+                    product.style.display = 'none';
                 }
             });
-        };
+        });
     </script>
 </body>
 </html>
